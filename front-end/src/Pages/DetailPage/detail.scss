@@ -1,0 +1,11 @@
+.DetailP{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    img{
+        width: 200px;
+        height: 200px;
+    }
+}

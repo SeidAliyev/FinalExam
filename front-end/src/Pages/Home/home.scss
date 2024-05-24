@@ -1,0 +1,30 @@
+.mainBack{
+    background-image: url("https://preview.colorlib.com/theme/foundation/images/hero_2.jpg");
+    height: 820px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.threeDivs{
+    display: flex;
+    height: 200px;
+    color: white;
+    .threeDiv{
+        border: 1px solid whitesmoke;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        padding: 20px;
+    }
+}
+.grayS{
+    background-color: #4E4E4E;
+}
+.orangeS{
+    background-color: #FD5F00;
+}
+.redS{
+    background-color: #A23131;
+}
+
