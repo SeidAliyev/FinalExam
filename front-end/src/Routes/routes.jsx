@@ -3,6 +3,7 @@ import Basket from '../Pages/Basket'
 import Detail from '../Pages/DetailPage'
 import Favorite from '../Pages/Favorite'
 import Home from '../Pages/Home/index'
+import Add from '../Pages/Add/index'
 
 const routes =[
     {
@@ -24,6 +25,16 @@ const routes =[
             path: "/basket",
             element: <Basket/>,
         },
+    ]
+      },
+      {
+        path: "/",
+        element: <UserRoot/>,
+        children:[{
+            path: "/admin",
+            element: <Add/>,
+        },
+        
     ]
       }
 ]

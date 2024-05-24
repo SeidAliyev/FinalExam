@@ -2,17 +2,17 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { decBasket,incBasket,setBasket } from '../../Redux/Features/helpSlicer'
+import {Helmet} from "react-helmet";
 
 const Basket = () => {
     const basket = useSelector((state) => state.helps.basket)
   const dispatch = useDispatch()
     return (
         <div className='helpArea myContainer'>
-            <div>
-                <p>
-                    Total Basket:
-                </p>
-                </div>
+             <Helmet>
+                <meta charSet="utf-8" />
+                <title>Basket</title>
+            </Helmet>
             {basket&&basket.map((elem,index)=>{
                 return(
                   <div key={index} className='helpMain'>

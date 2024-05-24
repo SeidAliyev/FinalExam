@@ -1,8 +1,16 @@
 import React from 'react'
+import Add from '../../Pages/Add'
+import Navbar from "../Navbar/index"
+import Footer from '../Footer'
 
 const AdminRoot = () => {
   return (
-    <div>AdminRoot</div>
+    <>
+    <Navbar/>
+    <Add/>
+    <Footer/>
+    </>
+   
   )
 }
 

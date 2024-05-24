@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { setHelp,setFavorite,setBasket } from '../../Redux/Features/helpSlicer'
+import {Helmet} from "react-helmet";
+
 
 const Favorite = () => {
 
@@ -10,6 +12,10 @@ const Favorite = () => {
 
     return (
         <div className='helpArea myContainer'>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Favorite</title>
+            </Helmet>
             {favorite&&favorite.map((elem,index)=>{
                 return(
                   <div key={index} className='helpMain'>

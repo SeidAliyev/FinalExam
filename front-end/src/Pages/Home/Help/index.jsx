@@ -2,10 +2,11 @@ import React from 'react'
 import { useEffect } from 'react'
 import "./help.scss"
 import { useSelector, useDispatch } from 'react-redux'
-import { setHelp,setFavorite,setBasket,AZHelp,ZAHelp } from '../../../Redux/Features/helpSlicer'
+import { setHelp,setFavorite,setBasket,AZHelp,ZAHelp,searchHelp } from '../../../Redux/Features/helpSlicer'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { CiHeart } from "react-icons/ci";
+import { useRef } from 'react'
 
 const Help = () => {
 
@@ -17,10 +18,12 @@ const Help = () => {
    axios.get("http://localhost:5000/api/help").then((res)=>dispatch(setHelp(res.data)))
  }, [])
  
-
+ const search = useRef()
   return (
     <>
     <div className='myContainer buttdiv'>
+      <input ref={search} placeholder='...Search' className='searchI' type="text" />
+      <button onClick={()=>{dispatch(searchHelp(search.current.value))}} className='sortBut'>Search</button>
       <button onClick={()=>dispatch(AZHelp())} className='sortBut'>A-Z</button>
     <button onClick={()=>dispatch(ZAHelp())} className='sortBut'>Z-A</button>
     </div>

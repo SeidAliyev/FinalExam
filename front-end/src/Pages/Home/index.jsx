@@ -1,10 +1,15 @@
 import React from 'react'
 import Help from './Help'
 import ("./home.scss")
+import { Helmet } from 'react-helmet'
 
 const Home = () => {
   return (
     <div>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>Home</title>
+            </Helmet>
       <div className='mainBack'>
       </div>
       <div className='threeDivs'>

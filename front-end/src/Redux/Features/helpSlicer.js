@@ -13,6 +13,15 @@ export const helpSlice = createSlice({
     setHelp: (state, action) => {
       state.help = action.payload
     },
+    postHelp: (state, action) => {
+      state.help = [...state.help,action.payload]
+    },
+    deleteHelp: (state, action) => {
+      state.help = state.help.filter(elem=>elem._id!==action.payload._id)
+    },
+    searchHelp: (state, action) => {
+      state.help =[... state.help.filter(elem=>elem.title.toLowerCase().trim().includes(action.payload.toLowerCase().trim()))]
+    },
     AZHelp: (state) => {
       state.help = state.help.sort((a,b)=>a.title.localeCompare(b.title))
     },
@@ -60,6 +69,6 @@ export const helpSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { setHelp,setFavorite,setBasket,removeBasket,decBasket,incBasket,AZHelp,ZAHelp } = helpSlice.actions
+export const { setHelp,setFavorite,setBasket,removeBasket,decBasket,incBasket,AZHelp,ZAHelp,deleteHelp,postHelp,searchHelp } = helpSlice.actions
 
 export default helpSlice.reducer

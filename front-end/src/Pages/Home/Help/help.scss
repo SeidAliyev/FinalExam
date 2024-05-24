@@ -2,6 +2,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    .searchI{
+        border: 1px solid #fd5f00;
+        padding: 9px;
+            margin: 2px;
+            border-radius: 5px;
+    }
     .sortBut{
         background-color: rgb(255, 254, 201);
             border: 1px solid #fd5f00;
